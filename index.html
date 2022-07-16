@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitter Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./main.js" type="text/javascript" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator__container">
+            <div class="calculator">
+                <div>
+                    <h2>Bill</h2>
+                    <input type="number" placeholder="Total bill" id="totalBill">
+                </div>
+                <div>
+                    <h2>Select Tip %</h2>
+                    <input type="radio" name="tip" id="fivePorcent" class="tipValue" value="5" class="select">
+                    <label for="fivePorcent">5%</label>
+                    <input type="radio" name="tip" id="tenPorcent" class="tipValue" value="10" class="select">
+                    <label for="tenPorcent">10%</label>
+                    <input type="radio" name="tip" id="fifteenPorcent" class="tipValue" value="15" class="select">
+                    <label for="fifteenPorcent">15%</label>
+                    <input type="radio" name="tip" id="twentyFivePorcent" class="tipValue" value="25" class="select">
+                    <label for="twentyFivePorcent">25%</label>
+                    <input type="radio" name="tip" id="fiftyPorcent" class="tipValue" value="50" class="select">
+                    <label for="fiftyPorcent">50%</label>
+                    
+
+                    <input type="number" placeholder="0" id="randomPorcent" min="0" pattern="^[0-9]+">
+                </div>
+                <div>
+                    <h2>Number of People</h2>
+                    <h2 id="zero">Can't be zero</h2>
+                    <input type="number" placeholder="0" id="numberPeople" min="1" pattern="^[0-9]+">
+                </div> 
+                <button type="button" onclick="calcular()">calcular</button>             
+            </div>
+            <div class="result">
+                <div>
+                    <h2>Tip amount</h2>
+                    <span>/ person</span>
+                </div>
+                <div>
+                    <span>$ </span><h2 id="tip">0.00</h2>
+                </div>
+                <div>
+                    <h2>Total</h2>
+                    <span>/ person</span>
+                </div>
+                <div>
+                    <span>$ </span><h2 id="totalPerson">0.00</h2>
+                </div>
+                <button type="reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
